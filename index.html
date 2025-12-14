@@ -1,258 +1,257 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Norms Dev | Software Engineering Leader</title>
-    <link href="fonts.googleapis.com" rel="stylesheet">
-    <style>
-        /* --- CSS Reset & Variables (Dark Theme) --- */
-        :root {
-            --bg-primary: #121212;
-            --bg-secondary: #1e1e1e;
-            --text-color: #e0e0e0;
-            --accent-color: #03dac6; /* Material Teal */
-            --card-bg: #2c2c2c;
-            --shadow-color: rgba(0, 0, 0, 0.5);
-        }
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        body {
-            font-family: 'Inter', sans-serif;
-            background-color: var(--bg-primary);
-            color: var(--text-color);
-            line-height: 1.6;
-            scroll-behavior: smooth;
-        }
-        .container {
-            max-width: 1100px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-        a {
-            text-decoration: none;
-            color: var(--accent-color);
-            transition: color 0.3s;
-        }
-        a:hover {
-            color: var(--text-color);
-        }
-        .section-title {
-            font-size: 2.5rem;
-            margin-bottom: 40px;
-            text-align: center;
-            border-bottom: 2px solid var(--accent-color);
-            display: inline-block;
-            padding-bottom: 10px;
-            margin-left: 50%;
-            transform: translateX(-50%);
-        }
-        ul { margin-left: 20px; }
-        li { margin-bottom: 5px; }
-
-
-        /* --- Navigation Bar --- */
-        nav {
-            background-color: var(--bg-secondary);
-            padding: 1rem 0;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            box-shadow: 0 4px 6px var(--shadow-color);
-        }
-        .nav-container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        .logo {
-            font-family: 'Roboto Mono', monospace;
-            font-size: 1.5rem;
-            color: var(--text-color);
-        }
-        .nav-links {
-            list-style: none;
-            display: flex;
-        }
-        .nav-links li a {
-            color: var(--text-color);
-            padding: 0.5rem 1rem;
-            font-weight: 600;
-        }
-        .nav-links li a:hover {
-            color: var(--accent-color);
-        }
-        .menu-toggle { display: none; }
-
-        /* --- Hero Section --- */
-        .hero {
-            height: 80vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            background: linear-gradient(135deg, var(--bg-primary), var(--bg-secondary));
-        }
-        .hero h1 {
-            font-size: 4rem;
-            margin-bottom: 0.5rem;
-            color: white;
-        }
-        .hero p {
-            font-size: 1.5rem;
-            color: var(--accent-color);
-            font-family: 'Roboto Mono', monospace;
-        }
-
-        /* --- Sections Styling (About, Skills, Projects, Contact) --- */
-        section {
-            padding: 100px 0;
-        }
-        .card {
-            background-color: var(--card-bg);
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 4px 10px var(--shadow-color);
-            margin-bottom: 20px;
-        }
-
-        /* --- Skills Section --- */
-        .skills-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-            gap: 15px;
-            text-align: center;
-        }
-        .skill-item {
-            padding: 15px;
-            background-color: var(--bg-secondary);
-            border-radius: 5px;
-            font-family: 'Roboto Mono', monospace;
-        }
-        
-        /* --- Experience Section --- */
-        .experience-item {
-            margin-bottom: 30px;
-        }
-        .experience-item h3 {
-            color: var(--accent-color);
-        }
-        .experience-item .role-info {
-            display: flex;
-            justify-content: space-between;
-            font-size: 0.9rem;
-            color: grey;
-            margin-bottom: 10px;
-        }
-
-        /* --- Contact Section --- */
-        .contact-info p {
-            margin-bottom: 10px;
-        }
-        
-        /* --- Footer --- */
-        footer {
-            background-color: var(--bg-secondary);
-            text-align: center;
-            padding: 20px 0;
-            font-size: 0.8rem;
-        }
-        .app-ads-link {
-            display: block;
-            margin-top: 10px;
-            color: grey;
-        }
-
-        /* --- Responsive Design --- */
-        @media (max-width: 768px) {
-            .hero h1 { font-size: 3rem; }
-            .hero p { font-size: 1.2rem; }
-            .nav-links { display: none; }
-            .nav-container { flex-wrap: wrap; }
-            .section-title { font-size: 2rem; }
-            .experience-item .role-info { flex-direction: column; align-items: start; }
-        }
-    </style>
-</head>
-<body>
-
-    <!-- Navigation Bar -->
-    <nav>
-        <div class="container nav-container">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Norms Dev | Software Engineering Leader</title>
+      <!-- FIX: Complete Google Fonts URL -->
+      <link href="fonts.googleapis.com" rel="stylesheet">
+      <!-- FIX: Complete Font Awesome URL -->
+      <link rel="stylesheet" href="cdnjs.cloudflare.com" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+      <style>
+         /* --- CSS Reset & Variables (Dark Theme) --- */
+         :root {
+         --bg-primary: #121212;
+         --bg-secondary: #1e1e1e;
+         --text-color: #e0e0e0;
+         --accent-color: #03dac6; /* Material Teal */
+         --card-bg: #2c2c2c;
+         --shadow-color: rgba(0, 0, 0, 0.5);
+         }
+         * {
+         margin: 0;
+         padding: 0;
+         box-sizing: border-box;
+         }
+         body {
+         font-family: 'Inter', sans-serif;
+         background-color: var(--bg-primary);
+         color: var(--text-color);
+         line-height: 1.6;
+         scroll-behavior: smooth;
+         }
+         .container {
+         max-width: 1100px;
+         margin: 0 auto;
+         padding: 0 20px;
+         }
+         a {
+         text-decoration: none;
+         color: var(--accent-color);
+         transition: color 0.3s;
+         }
+         a:hover {
+         color: var(--text-color);
+         }
+         .section-title {
+         font-size: 2.5rem;
+         margin-bottom: 40px;
+         text-align: center;
+         border-bottom: 2px solid var(--accent-color);
+         display: inline-block;
+         padding-bottom: 10px;
+         margin-left: 50%;
+         transform: translateX(-50%);
+         }
+         ul { margin-left: 20px; }
+         li { margin-bottom: 5px; }
+         /* --- Navigation Bar --- */
+         nav {
+         background-color: var(--bg-secondary);
+         padding: 1rem 0;
+         position: sticky;
+         top: 0;
+         z-index: 1000;
+         box-shadow: 0 4px 6px var(--shadow-color);
+         }
+         .nav-container {
+         display: flex;
+         justify-content: space-between;
+         align-items: center;
+         }
+         .logo {
+         font-family: 'Roboto Mono', monospace;
+         font-size: 1.5rem;
+         color: var(--text-color);
+         }
+         .nav-links {
+         list-style: none;
+         display: flex;
+         }
+         .nav-links li a {
+         color: var(--text-color);
+         padding: 0.5rem 1rem;
+         font-weight: 600;
+         }
+         .nav-links li a:hover {
+         color: var(--accent-color);
+         }
+         .menu-toggle { display: none; }
+         /* --- Hero Section --- */
+         .hero {
+         height: 80vh;
+         display: flex;
+         align-items: center;
+         justify-content: center;
+         text-align: center;
+         background: linear-gradient(135deg, var(--bg-primary), var(--bg-secondary));
+         }
+         .hero h1 {
+         font-size: 4rem;
+         margin-bottom: 0.5rem;
+         color: white;
+         }
+         .hero p {
+         font-size: 1.5rem;
+         color: var(--accent-color);
+         font-family: 'Roboto Mono', monospace;
+         }
+         /* --- Sections Styling (About, Skills, Projects, Contact) --- */
+         section {
+         padding: 100px 0;
+         }
+         .card {
+         background-color: var(--card-bg);
+         padding: 20px;
+         border-radius: 8px;
+         box-shadow: 0 4px 10px var(--shadow-color);
+         margin-bottom: 20px;
+         }
+         /* --- Skills Section --- */
+         .skills-grid {
+         display: grid;
+         grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+         gap: 15px;
+         text-align: center;
+         }
+         .skill-item {
+         padding: 15px;
+         background-color: var(--bg-secondary);
+         border-radius: 5px;
+         font-family: 'Roboto Mono', monospace;
+         }
+         /* --- Experience Section --- */
+         .experience-item {
+         margin-bottom: 30px;
+         }
+         .experience-item h3 {
+         color: var(--accent-color);
+         }
+         .experience-item .role-info {
+         display: flex;
+         justify-content: space-between;
+         font-size: 0.9rem;
+         color: grey;
+         margin-bottom: 10px;
+         }
+         /* --- Contact Section Styles --- */
+         .contact-icons {
+         display: flex;
+         justify-content: center; /* Centers the icons horizontally */
+         gap: 30px; /* Adds space between the icons */
+         margin-top: 20px;
+         }
+         .contact-icons a i {
+         color: var(--accent-color); /* Uses your theme's teal color */
+         transition: color 0.3s;
+         }
+         .contact-icons a i:hover {
+         color: var(--text-color); /* Changes color on hover */
+         }
+         /* Remove the default margin-bottom from the old P tags if they remain */
+         .contact-info p {
+         margin-bottom: 15px;
+         }
+         /* --- Footer --- */
+         footer {
+         background-color: var(--bg-secondary);
+         text-align: center;
+         padding: 20px 0;
+         font-size: 0.8rem;
+         }
+         .app-ads-link {
+         display: block;
+         margin-top: 10px;
+         color: grey;
+         }
+         /* --- Responsive Design --- */
+         @media (max-width: 768px) {
+         .hero h1 { font-size: 3rem; }
+         .hero p { font-size: 1.2rem; }
+         .nav-links { display: none; }
+         .nav-container { flex-wrap: wrap; }
+         .section-title { font-size: 2rem; }
+         .experience-item .role-info { flex-direction: column; align-items: start; }
+         }
+      </style>
+   </head>
+   <body>
+      <!-- Navigation Bar -->
+      <nav>
+         <div class="container nav-container">
             <div class="logo">NormsDev</div>
             <ul class="nav-links">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#contact">Contact</a></li>
+               <li><a href="#home">Home</a></li>
+               <li><a href="#about">About</a></li>
+               <li><a href="#skills">Skills</a></li>
+               <li><a href="#contact">Contact</a></li>
             </ul>
-        </div>
-    </nav>
-
-    <!-- Hero Section -->
-    <header id="home" class="hero">
-        <div class="container">
+         </div>
+      </nav>
+      <!-- Hero Section -->
+      <header id="home" class="hero">
+         <div class="container">
             <h1>Hi, I'm NormsDev.</h1>
             <p>Software Developer | Engineering Manager | Tech Enthusiast</p>
-        </div>
-    </header>
-
-    <!-- About Me Section (Summary) -->
-    <section id="about">
-        <div class="container">
+         </div>
+      </header>
+      <!-- About Me Section (Summary) -->
+      <section id="about">
+         <div class="container">
             <h2 class="section-title">About Me</h2>
             <div class="card">
-                <p>
-                    I'm a software engineering veteran with over a decade **in various industries**, leading awesome teams and shipping epic enterprise apps! I thrive on tackling big projects, architecting scalable mobile and web solutions, and keeping things smooth with modern development practices (think Scrum, CI/CD magic, and solid testing).
-                </p>
-                <p>
-                    I've jumped between loads of industries—telecom, finance, entertainment, you name it. Right now, I'm all about mobile engineering leadership: digging into requirements, designing robust systems, optimizing databases, and keeping everything running like a dream. Let's build something future-proof!
-                </p>
+               <p>
+                  I'm a software engineering veteran with over a decade **in various industries**, leading awesome teams and shipping epic enterprise apps! I thrive on tackling big projects, architecting scalable mobile and web solutions, and keeping things smooth with modern development practices (think Scrum, CI/CD magic, and solid testing).
+               </p>
+               <p>
+                  I've jumped between loads of industries—telecom, finance, entertainment, you name it. Right now, I'm all about mobile engineering leadership: digging into requirements, designing robust systems, optimizing databases, and keeping everything running like a dream. Let's build something future-proof!
+               </p>
             </div>
-        </div>
-    </section>
-
-    <!-- Skills Section (Core Competencies) -->
-    <section id="skills">
-        <div class="container">
+         </div>
+      </section>
+      <!-- Skills Section (Core Competencies) -->
+      <section id="skills">
+         <div class="container">
             <h2 class="section-title">Technical Expertise</h2>
             <div class="skills-grid">
-                <div class="skill-item">Flutter</div>
-                <div class="skill-item">Android & iOS</div>
-                <div class="skill-item">React Native</div>
-                <div class="skill-item">Java & Kotlin</div>
-                <div class="skill-item">Spring Framework</div>
-                <div class="skill-item">NodeJs & Go</div>
-                <div class="skill-item">PostgreSQL & MySQL</div>
-                <div class="skill-item">Redis & Kafka</div>
-                <div class="skill-item">CI/CD & Testing</div>
-                <div class="skill-item">Scrum Leadership</div>
+               <div class="skill-item">Flutter</div>
+               <div class="skill-item">Android & iOS</div>
+               <div class="skill-item">React Native</div>
+               <div class="skill-item">Java & Kotlin</div>
+               <div class="skill-item">Spring Framework</div>
+               <div class="skill-item">NodeJs & Go</div>
+               <div class="skill-item">PostgreSQL & MySQL</div>
+               <div class="skill-item">Redis & Kafka</div>
+               <div class="skill-item">CI/CD & Testing</div>
+               <div class="skill-item">Scrum Leadership</div>
             </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact">
-        <div class="container">
+         </div>
+      </section>
+      <!-- Contact Section -->
+      <section id="contact">
+         <div class="container">
             <h2 class="section-title">Contact</h2>
             <div class="card contact-info">
-                <p>Ready to level up an engineering team! Hit me up if you need a tech roles—let's build something awesome.</p>
-                <p>Email: <a href="mailto:norms.dev@gmail.com">norms.dev@gmail.com</a></p>
-                <p>LinkedIn: <a href="https://www.linkedin.com/in/budi-normansyah/" target="_blank">LinkedIn</a></p>
+               <p>Ready to level up an engineering team! Hit me up through <a href="mailto:norms.dev@gmail.com">email</a> or <a href="https://www.linkedin.com/in/budi-normansyah/" target="_blank">LinkedIn</a> if you need a tech roles—let's build something awesome.</p>
             </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer>
-        <div class="container">
+         </div>
+      </section>
+      <!-- Footer -->
+      <footer>
+         <div class="container">
             <p>&copy; 2025 Norms Dev. All rights reserved.</p>
-            <a class="app-ads-link" href="/app-ads.txt" target="_blank">app-ads.txt</a>
-        </div>
-    </footer>
-
-</body>
+            <!-- <a class="app-ads-link" href="/app-ads.txt" target="_blank">app-ads.txt</a> -->
+         </div>
+      </footer>
+   </body>
 </html>
