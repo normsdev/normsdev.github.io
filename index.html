@@ -508,6 +508,9 @@
         max-width: 500px;
         line-height: 1.8;
         margin-bottom: 48px;
+        text-align: justify;
+        text-align-last: left;
+        overflow-wrap: break-word;
       }
 
       .hero-actions {
@@ -676,6 +679,9 @@
         color: var(--muted2);
         font-weight: 300;
         line-height: 1.9;
+        text-align: justify;
+        text-align-last: left;
+        overflow-wrap: break-word;
       }
       .about-text p + p {
         margin-top: 18px;
@@ -908,7 +914,8 @@
         font-weight: 300;
         line-height: 1.75;
         text-align: justify;
-        hyphens: auto;
+        text-align-last: left;
+        overflow-wrap: break-word;
       }
       .tl-desc a {
         color: var(--accent);
@@ -1688,12 +1695,12 @@
                   <br /><br />
                   Led the development of mobile apps, streaming platforms, TV
                   apps, fintech systems, telecom services, CMS platforms, and
-                  products for companies including GoTo Group, Smartfren,
-                  Samsung R&D, GetCraft, UangTeman, TopJek Indonesia, and
-                  others. Delivered Android, iOS, Flutter, React Native, web,
-                  and backend solutions using technologies such as Kotlin, Java,
-                  Spring Boot, Go, Node.js, React, Flutter, PostgreSQL, MySQL,
-                  MongoDB, Redis, Docker, Firebase, and Elasticsearch.
+                  products for companies including GoTo Group (Mapan & GoPlay),
+                  Smartfren, Samsung R&D, GetCraft, UangTeman, TopJek Indonesia,
+                  and others. Delivered Android, iOS, Flutter, React Native,
+                  web, and backend solutions using technologies such as Kotlin,
+                  Java, Spring Boot, Go, Node.js, React, Flutter, PostgreSQL,
+                  MySQL, MongoDB, Redis, Docker, Firebase, and Elasticsearch.
                   Recognized for combining leadership with deep technical
                   execution to build reliable, scalable, and user-focused
                   products from startup stage to enterprise scale.
@@ -1767,7 +1774,7 @@
     </div>
 
     <script>
-      const isTouch = window.matchMedia("(hover: none)").matches;
+      const isTouch = globalThis.matchMedia("(hover: none)").matches;
 
       // Mobile menu — full-screen overlay
       const toggle = document.getElementById("mobile-menu");
@@ -1819,7 +1826,10 @@
         .forEach((el) => observer.observe(el));
 
       // Cursor glow + parallax — desktop only
-      if (!isTouch) {
+      if (isTouch) {
+        // Hide cursor glow on touch
+        document.getElementById("cursor-glow").style.display = "none";
+      } else {
         const glow = document.getElementById("cursor-glow");
         let mx = window.innerWidth / 2,
           my = window.innerHeight / 2;
@@ -1849,9 +1859,6 @@
           document.querySelector(".orb-4").style.transform =
             `translate(${nx * -14}px,${ny * 18}px)`;
         });
-      } else {
-        // Hide cursor glow on touch
-        document.getElementById("cursor-glow").style.display = "none";
       }
     </script>
   </body>
